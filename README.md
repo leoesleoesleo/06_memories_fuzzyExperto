@@ -6,12 +6,12 @@ Un sistema de audio respuesta tiene un CSV que contiene cantidades de las siguie
 
 Se pretende contruir un experto que permita identificar cuando estas variables estan por encima del umbral basandose en una serie de reglas difuzas para determinar si esta por encima o por debajo del umbral.
 
-* variables: 
+variables: 
 - llam
 - tran
 - vol
 
-* Reglas de negocio:
+Reglas de negocio:
 - lete: llam y tran por encima de lo normal
 - leve: llam y vol por encima de lo normal
 - le: llam por encima de lo normal
@@ -20,18 +20,18 @@ Se pretende contruir un experto que permita identificar cuando estas variables e
 - ld: llam por debajo de lo normal
 - vt: vol por debajo de lo normal
 
-* Fuzzy rules
+Fuzzy rules
 Ahora, para hacer que estos triángulos sean útiles, definimos la * relación difusa *
 entre variables de entrada y salida. Para los propósitos de nuestro ejemplo, considere
 seis reglas simples:
-
-si lete alto entonces alerta naranja
-si leve alto entonces alerta naranja
-si le alto entonces alerta verde
-si te alto entonces alerta amarilla
-si ve alto entonces alerta verde
-si vd ó td alto entonces alerta verde
-
+```
+si lete alto entonces alerta naranja,
+si leve alto entonces alerta naranja,
+si le alto entonces alerta verde,
+si te alto entonces alerta amarilla,
+si ve alto entonces alerta verde,
+si vd ó td alto entonces alerta verde,
+```
 ```
 regla1 = ctrl.Rule(lete['alto'], alerta['naranja'])
 regla2 = ctrl.Rule(leve['alto'], alerta['naranja'])
