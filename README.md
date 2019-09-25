@@ -20,6 +20,19 @@ Reglas de negocio:
 - ld: llam por debajo de lo normal
 - vt: vol por debajo de lo normal
 
+```
+RN/Alerta	Verde	Amarillo	Narajna
+lete			                    x
+leve			                    x
+le	          x		
+te		                x	
+ve	          x		
+ld			
+vt			
+td	          x		
+vd	          x		
+```
+
 Fuzzy rules
 Ahora, para hacer que estos triángulos sean útiles, definimos la * relación difusa *
 entre variables de entrada y salida. Para los propósitos de nuestro ejemplo, considere
